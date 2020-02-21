@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.projectStatsController">
+   <children>
+      <Button fx:id="newProjectButton" layoutX="470.0" layoutY="100.0" mnemonicParsing="false" onAction="#createProject" text="New Project" />
+      <HBox prefHeight="400.0" prefWidth="338.0">
+         <children>
+            <PieChart fx:id="projectsPiechart" minHeight="282.0" minWidth="150" prefHeight="282.0" prefWidth="2000.0" title="Projects status" />
+         </children>
+      </HBox>
+      <TextField fx:id="newProjectTextField" layoutX="406.0" layoutY="61.0" promptText="Project Title" />
+      <Button fx:id="projectsButton" layoutX="470.0" layoutY="175.0" mnemonicParsing="false" onAction="#goToProjects" prefHeight="32.0" prefWidth="88.0" text="Projects" />
+   </children>
+</AnchorPane>

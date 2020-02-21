@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.projectsDetailsController">
+   <children>
+      <HBox layoutX="1.0" prefHeight="400.0" prefWidth="277.0">
+         <children>
+            <TabPane prefHeight="400.0" prefWidth="282.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Projects">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="activeProjectTable" layoutX="-2.0" layoutY="1.0" onMouseClicked="#getSelectedRow" prefHeight="369.0" prefWidth="277.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+      <TextField fx:id="addUserLogin" layoutX="368.0" layoutY="129.0" text="User login" />
+      <Button fx:id="addUserButton" layoutX="462.0" layoutY="163.0" mnemonicParsing="false" onAction="#addUser" text="Add" />
+      <Line endX="100.0" layoutX="442.0" layoutY="117.0" startX="-100.0" />
+      <Text layoutX="367.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add user to selected project" wrappingWidth="149.0000000000001" />
+      <Line endX="100.0" layoutX="442.0" layoutY="245.0" startX="-100.0" />
+      <Button fx:id="completeProjectPutton" layoutX="455.0" layoutY="256.0" mnemonicParsing="false" onAction="#completeProject" text="Button" />
+      <Text layoutX="393.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complete Project" wrappingWidth="94.13671875" />
+      <Text fx:id="selectedProjectText" layoutX="391.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Project" wrappingWidth="103.13671875" />
+      <Line endX="100.0" layoutX="443.0" layoutY="319.0" startX="-100.0" />
+      <Text layoutX="402.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Project" wrappingWidth="76.13671875" />
+      <Button layoutX="455.0" layoutY="336.0" mnemonicParsing="false" onAction="#deleteProject" text="Delete" />
+   </children>
+</AnchorPane>
